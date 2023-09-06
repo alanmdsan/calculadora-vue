@@ -34,26 +34,19 @@ const calcula = () => {
 
 <template>
   <div class="container">
-    <input @change="muda_operador_1" @keyup="muda_operador_1" type="number" min="0" max="100000" maxlength="10" size="10" placeholder="0">
+    <input @change="muda_operador_1" @keyup="muda_operador_1" type="number" min="0" max="1000000" maxlength="10" size="10" placeholder="">
     <select @change="muda_operacao">
       <option value="+">+</option>
       <option value="-">-</option>
       <option value="*">x</option>
       <option value="/">÷</option>
     </select>
-    <input @change="muda_operador_2" @keyup="muda_operador_2" type="number" min="0" max="100000" maxlength="10" size="10" placeholder="0">
-    <span class="resultado">{{ estado.resultado }}</span>
+    <input @change="muda_operador_2" @keyup="muda_operador_2" type="number" min="0" max="1000000" maxlength="10" size="10" placeholder="">
+    <span class="equal">=</span> <span class="resultado">{{ estado.resultado }}</span>
   </div>
 </template>
 
 <style scoped>
-:root {
-  --color_davys_gray: #4A4A48;
-  --color_cambridge_blue: #A4C2A5;
-  --color_timberwolf: #D8DAD3;
-  --color_alabaster: #F1F2EB;
-}
-
 .container {
   font-family: sans-serif;
   max-width: 960px;
@@ -80,9 +73,9 @@ select {
 option {
   color: #4A4A48;
 }
-.resultado {
+.equal, .resultado {
   font-size: 2rem;
   color: #4A4A48;
-  margin-left: 16px;
+  margin-left: 8px;
 }
 </style>
