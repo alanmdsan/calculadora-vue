@@ -34,14 +34,14 @@ const calcula = () => {
 
 <template>
   <div class="container">
-    <input @change="muda_operador_1" @keyup="muda_operador_1" type="number" min="0" max="1000000" maxlength="10" size="10" placeholder="">
+    <input :value="estado.operador_1" @change="muda_operador_1" @keyup="muda_operador_1" type="number" min="0" max="1000000" maxlength="10" size="10" placeholder="">
     <select @change="muda_operacao">
       <option value="+">+</option>
       <option value="-">-</option>
       <option value="*">x</option>
       <option value="/">÷</option>
     </select>
-    <input @change="muda_operador_2" @keyup="muda_operador_2" type="number" min="0" max="1000000" maxlength="10" size="10" placeholder="">
+    <input :value="estado.operador_2" @change="muda_operador_2" @keyup="muda_operador_2" type="number" min="0" max="1000000" maxlength="10" size="10" placeholder="">
     <span class="equal">=</span> <span class="resultado">{{ estado.resultado }}</span>
   </div>
 </template>
